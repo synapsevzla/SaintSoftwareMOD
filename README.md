@@ -17,6 +17,8 @@ http://www.saintnet.com.ve
 
 Mod es el termino usar para modificaciones o adecuaciones de un sistema o cualquier programa aqui usted no encontrara el instalador de la aplicacion ni su codigo fuente, solo encontrara; modificaciones de vistas, creacion de reportes nuevos o cualquier otro contenido que pueda ayudar a la evolucion del sistema.
 
+En cada carpeta usted encontrara contenido diverso que podra ajustar a cada una de sus necesidades; en algunos de los casos tendra que agregar un procedimiento almacenado en el motor de base de datos en otros de ellos solo sera cuestion de cargar un simple archivo en un generador de reportes y listo, siempre tomece su tiempo para leer lo que consiga en cada una de las carpetas y mucha suerte.
+
 Saludos.
 
 Jhonatan Ruiz.
