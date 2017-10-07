@@ -39,3 +39,34 @@ Algunos ajustes son necesarios para las facturas que manejan 12 con el decreto y
 formato de factura iva sencillo sin tener que hacer ajustes: factura3085
 formato de dev iva sencillo sin tener que hacer ajustes: dev3085
 formato de factura para ajustar 3085 mas iva 8%: especial3085
+
+Tenga en cuenta que debido este decreto el comportamiento del sistema cambio por lo que al momento del reajuste del iva los productos facturados con el descuento del 3 y del 5% del iva reflejan como iva el 9 y el 7 %.
+
+Si usted es de estas personas que tiene en su forma libre los productos reflejando las tasas de los impuestos tendra un gran problema a la hora de la impresion de los mismos por lo que debera realizar un ajuste sobre una variable en el mejor de los casos.
+
+# Ejemplo del ajuste que selecciona y muestra el iva correspondiente sobre una variable aplicada a la linea del producto.
+
+```
+if Impuesto_Item_factura2['Monto_Impuesto']=12
+then 
+Value:= 12 
+else if Impuesto_Item_factura2['Monto_Impuesto']=9
+then
+Value:= 12   
+else if Impuesto_Item_factura2['Monto_Impuesto']=7
+then
+Value:= 12
+else if Impuesto_Item_factura2['Monto_Impuesto']=8
+then
+Value:= 8      
+else
+Value:= 'Exento';
+```
+
+El modelo al cual hago referencia es 
+
+factura alti especia decreto 3085.rtm y dev alti especial 3085.rtm 
+
+Con estos dos ejemplos usted se podra guiar para adecuar sus formatos adaptados a al decreto.
+
+Saludos y exito.
