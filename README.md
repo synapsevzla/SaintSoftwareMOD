@@ -7,6 +7,7 @@ Saint es un software administrativo creado y desarrollado por saint de venezuela
 1. Windows 7 o Superior, En caso de servidores Windows Server 2008 R2 o Superior.
 2. Al menos 4GB de ram para la estacion servidora o cliente servidora.
 3. SQL Server 2012.
+4. 1Gb (2 GB) Recomendados para la estacion cliente.
 
 # Web del Fabricante.
 
