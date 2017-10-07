@@ -27,10 +27,12 @@ WHERE        (MtoTax = 7) AND (TipoFac = 'B') OR
                          (MtoTax = 9) AND (TipoFac = 'B') OR
                          (MtoTax = 12) AND (TipoFac = 'B')
 ```
-//Agregue el procedimiento almacenado enviado junto al correo electronico en la base de datos para que al momento de ejecutarlo se agruegen las vistas al generador de reportes
+Agregue el procedimiento almacenado enviado junto al correo electronico en la base de datos para que al momento de ejecutarlo se agruegen las vistas al generador de reportes
 
+
+```
 EXEC  SP_ADDTOGRA 'nombre_de_vista', 'alias_de_vista' remplaza lo que estan entre comillas por el nombre de la vista
-
+```
 
 
 
