@@ -1,9 +1,9 @@
 Vistas a crear en la base de datos
 
-//Esta vista busca los impuestos con valores de 9 y 7 sin importar si son generales reducidos o al luju y es para la facturacion.
+Esta vista busca los impuestos con valores de 9 y 7 sin importar si son generales reducidos o al luju y es para la facturacion.
 
-Nombre de la vista: VW_TAXT_VTA_3085
-
+# Nombre de la vista: VW_TAXT_VTA_3085
+```
 SELECT        TipoFac, NumeroD, CodTaxs, Monto, MtoTax, TGravable, CodSucu, 
                          CASE WHEN MtoTax = 9 THEN '*Descto de I.V.A del 3% Decreto Nro 3085 9% de I.V.A' WHEN MtoTax = 7 THEN '*Descto de I.V.A del 5% Decreto Nro 3085 7% de I.V.A' WHEN
                           MtoTax = 12 THEN '*No Aplica Descuento Segun Decreto 3085 IVA' ELSE NULL END AS Decreto3085, 
@@ -13,11 +13,11 @@ WHERE        (MtoTax = 7) AND (TipoFac = 'A') OR
                          (MtoTax = 9) AND (TipoFac = 'A') OR
                          (MtoTax = 12) AND (TipoFac = 'A')
 
+```
+Esta vista busca los impuestos con valores de 9 y 7 sin importal si son generales reducidos o al lujo y es para buscar los impuestos de las devoluciones
 
-//Esta vista busca los impuestos con valores de 9 y 7 sin importal si son generales reducidos o al lujo y es para buscar los impuestos de las devoluciones
-
-Nombre de la Vista: VW_TAXT_VTA_DEV3085
-
+# Nombre de la Vista: VW_TAXT_VTA_DEV3085
+```
 SELECT        TipoFac, NumeroD, CodTaxs, Monto, MtoTax, TGravable, CodSucu, 
                          CASE WHEN MtoTax = 9 THEN '*Reverso 3% Decreto Nro 3085 9% de I.V.A' WHEN MtoTax = 7 THEN '*Reverso 5% Decreto Nro 3085 7% de I.V.A' WHEN MtoTax = 12 THEN
                           '*No Aplica Reverso de Decreto 3085 IVA' ELSE NULL END AS Decreto3085, 
@@ -26,7 +26,7 @@ FROM            dbo.SATAXVTA
 WHERE        (MtoTax = 7) AND (TipoFac = 'B') OR
                          (MtoTax = 9) AND (TipoFac = 'B') OR
                          (MtoTax = 12) AND (TipoFac = 'B')
-
+```
 //Agregue el procedimiento almacenado enviado junto al correo electronico en la base de datos para que al momento de ejecutarlo se agruegen las vistas al generador de reportes
 
 EXEC  SP_ADDTOGRA 'nombre_de_vista', 'alias_de_vista' remplaza lo que estan entre comillas por el nombre de la vista
