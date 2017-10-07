@@ -1,4 +1,4 @@
-En esta seccion usted se encuentra con los libros de ventas pero el libro de ventas se comporta diferente en cada caso aplicado.
+En esta seccion usted se encuentra con los libros de ventas pero el libro de compras se comporta diferente en cada caso aplicado.
 
 Si usted es como yo que no le gusta seguir manuales y ya creo sus impuestos con los codigos a su antojo entonces tendra que realizar ciertos ajustes sobre la estructura del codigo registrado en el archivo.
 Leer para crear.sql.
