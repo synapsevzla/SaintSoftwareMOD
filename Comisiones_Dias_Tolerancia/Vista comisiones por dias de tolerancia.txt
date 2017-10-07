@@ -1,0 +1,16 @@
+SELECT     dbo.SAPAGCXC.TipoCxc, dbo.SAPAGCXC.Monto AS [MONTO PAGADO], dbo.SAPAGCXC.Descrip AS [DETALLE DEL PAGO], dbo.SAPAGCXC.EsReten AS [TIENE RET], 
+                      dbo.SAPAGCXC.BaseReten AS [BASE RET PAG], dbo.SAPAGCXC.BaseImpo AS [BASE IMP PAG], dbo.SAPAGCXC.TExento AS [P EXENTO PAGO], 
+                      dbo.SAPAGCXC.MtoTax AS [MONTO IVA PAGO], dbo.SAACXC.NumeroN AS [NUMERO FACT], dbo.SAFACT.TipoFac AS [TIPO DE DOC], 
+                      dbo.SAFACT.NumeroD AS [NUMERO F], dbo.SAFACT.Monto AS [MONTO ORIGINAL], dbo.SAFACT.FechaE AS [FECHA FACT], 
+                      dbo.SAPAGCXC.FechaE AS [FECHA DEL PAGO], dbo.SAACXC.CodVend AS [CODIG VEND], dbo.SAACXC.TipoCxc AS [TIPO CXC], dbo.SAFACT.MtoTax, 
+                      dbo.SAFACT.MtoTotal, dbo.SAACXC.NumeroD, dbo.SAFACT.CodClie, dbo.SAFACT.Descrip, DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) AS DIASCREDITO, 
+                      CASE WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 0 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 3 THEN 3.5 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 4 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 7 THEN 3.25 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 8 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 14 THEN 3 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 15 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 30 THEN 2 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 31 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 30000000 THEN 0 ELSE NULL END AS [% DE COMISION], dbo.SAACXC.MtoTax AS [IVA SOBRE PAGO]
+FROM         dbo.SAPAGCXC INNER JOIN
+                      dbo.SAACXC ON dbo.SAPAGCXC.NroPpal = dbo.SAACXC.NroUnico INNER JOIN
+                      dbo.SAFACT ON dbo.SAACXC.NumeroN = dbo.SAFACT.NumeroD
+WHERE     (dbo.SAPAGCXC.TipoCxc = '10')

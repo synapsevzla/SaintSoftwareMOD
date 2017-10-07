@@ -1,0 +1,2392 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'Carta'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 215900
+  PrinterSetup.mmPaperWidth = 279400
+  PrinterSetup.PaperSize = 1
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = 'Comisios por Dias de Tolerancia'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'D:\desarrollos\reportes saint\comisiones por dias de tolerancia\' +
+    'comisiones por dias de toleranciav3.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  CachePages = True
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = []
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.WindowState = wsMaximized
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  ShowAutoSearchDialog = True
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<EncontrarTexto>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 176
+  Top = 88
+  Version = '16.03'
+  mmColumnWidth = 0
+  DataPipelineName = 'VW_Calculo_Comision_Manual'
+  object ppHeaderBand1: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 46831
+    mmPrintPosition = 0
+    object ppLabel2: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label2'
+      AutoSize = False
+      Caption = 'Cod. Vendedor:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 0
+      mmTop = 12983
+      mmWidth = 31750
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText2: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText2'
+      DataField = 'CodVend'
+      DataPipeline = daADOQueryDataView2.Vendedores
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Vendedores'
+      mmHeight = 4763
+      mmLeft = 33605
+      mmTop = 12983
+      mmWidth = 32808
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel3: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label3'
+      AutoSize = False
+      Caption = 'Nombre:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 0
+      mmTop = 17744
+      mmWidth = 23283
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText3: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText3'
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView2.Vendedores
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Vendedores'
+      mmHeight = 4763
+      mmLeft = 24342
+      mmTop = 17744
+      mmWidth = 92340
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label4'
+      AutoSize = False
+      Caption = 'DETALLE DEL PAGO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 1029
+      mmTop = 41567
+      mmWidth = 32808
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label5'
+      AutoSize = False
+      Caption = 'MONTO PAGADO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 108512
+      mmTop = 41567
+      mmWidth = 26713
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel6: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label6'
+      AutoSize = False
+      Caption = 'FEC DE PAGO'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 202741
+      mmTop = 41567
+      mmWidth = 19834
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel7: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label7'
+      AutoSize = False
+      Caption = 'FEC FACTURA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      FormField = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 181850
+      mmTop = 41567
+      mmWidth = 20363
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel8: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label8'
+      AutoSize = False
+      Caption = 'DIAS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 223630
+      mmTop = 41567
+      mmWidth = 8718
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel9: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label9'
+      AutoSize = False
+      Caption = 'MONTO FACTURA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      FormField = False
+      Transparent = True
+      WordWrap = True
+      mmHeight = 9525
+      mmLeft = 157163
+      mmTop = 36777
+      mmWidth = 19050
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel1: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label1'
+      AutoSize = False
+      Caption = 'PAG. Nro'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 51579
+      mmTop = 41567
+      mmWidth = 14816
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel10: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label10'
+      AutoSize = False
+      Caption = '%'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      FormField = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 233363
+      mmTop = 41567
+      mmWidth = 7408
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable1: TppSystemVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'SystemVariable1'
+      VarType = vtSearchDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      WordWrap = True
+      mmHeight = 8208
+      mmLeft = 12700
+      mmTop = 28578
+      mmWidth = 242359
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel11: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label101'
+      AutoSize = False
+      Caption = 'Monto a Pagar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 241565
+      mmTop = 41567
+      mmWidth = 23813
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLine1: TppLine
+      DesignLayer = ppDesignLayer1
+      UserName = 'Line1'
+      Weight = 0.750000000000000000
+      mmHeight = 1319
+      mmLeft = 1317
+      mmTop = 45817
+      mmWidth = 264184
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'SystemVariable2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 250825
+      mmTop = 265
+      mmWidth = 14288
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable3: TppSystemVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'SystemVariable3'
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 232305
+      mmTop = 265
+      mmWidth = 8466
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText12: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText12'
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView3.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold, fsItalic]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 4763
+      mmLeft = 0
+      mmTop = 265
+      mmWidth = 142875
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppVariable1: TppVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'Variable1'
+      BlankWhenZero = False
+      CalcOrder = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold, fsItalic]
+      Transparent = True
+      WordWrap = True
+      mmHeight = 6879
+      mmLeft = 0
+      mmTop = 5556
+      mmWidth = 142875
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel12: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label11'
+      Caption = 'Resumen de Calculo de Comision Segun Dias de Tolerancia'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      FormField = False
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 76465
+      mmTop = 23548
+      mmWidth = 120915
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel17: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label17'
+      AutoSize = False
+      Caption = 'Base'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 135732
+      mmTop = 36770
+      mmWidth = 14288
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel18: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label18'
+      AutoSize = False
+      Caption = 'Imponible'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      FormField = False
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 135728
+      mmTop = 41279
+      mmWidth = 14288
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppDBText4: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText4'
+      DataField = 'DETALLE_DEL_PAGO'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3703
+      mmLeft = 1029
+      mmTop = 792
+      mmWidth = 49996
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText5: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText5'
+      DataField = 'MONTO_PAGADO'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3703
+      mmLeft = 108512
+      mmTop = 792
+      mmWidth = 26713
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText6: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText6'
+      DataField = 'FECHA_DEL_PAGO'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = 'dd/mm/yy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3704
+      mmLeft = 202741
+      mmTop = 794
+      mmWidth = 19304
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText7: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText7'
+      DataField = 'FECHA_FACT'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = 'dd/mm/yy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3704
+      mmLeft = 181850
+      mmTop = 794
+      mmWidth = 20363
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText8: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText8'
+      DataField = 'MtoTotal'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3703
+      mmLeft = 157243
+      mmTop = 794
+      mmWidth = 23798
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText1: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText1'
+      DataField = 'NumeroD'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3703
+      mmLeft = 51579
+      mmTop = 794
+      mmWidth = 14788
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppVariable2: TppVariable
+      DesignLayer = ppDesignLayer1
+      UserName = 'Variable2'
+      AutoSize = False
+      BlankWhenZero = False
+      CalcOrder = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 67199
+      mmTop = 794
+      mmWidth = 40759
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText9: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText9'
+      DataField = 'DIASCREDITO'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3438
+      mmLeft = 223573
+      mmTop = 794
+      mmWidth = 8693
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText11: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText11'
+      DataField = 'VW_Calculo_Comision_Manu'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3968
+      mmLeft = 241300
+      mmTop = 795
+      mmWidth = 23813
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText10: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText10'
+      DataField = 'DE_COMISION'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taCentered
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3435
+      mmLeft = 233363
+      mmTop = 794
+      mmWidth = 7408
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText13: TppDBText
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBText13'
+      DataField = 'BASE_IMP_PAG'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3704
+      mmLeft = 135732
+      mmTop = 795
+      mmWidth = 20633
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 20108
+    mmPrintPosition = 0
+    object ppShape1: TppShape
+      DesignLayer = ppDesignLayer1
+      UserName = 'Shape1'
+      mmHeight = 5014
+      mmLeft = 1030
+      mmTop = 0
+      mmWidth = 264714
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppDBCalc1: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc1'
+      ReprintOnOverFlow = True
+      DataField = 'MONTO_PAGADO'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ReprintOnSubsequent = True
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3703
+      mmLeft = 100789
+      mmTop = 794
+      mmWidth = 38380
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppDBCalc4: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc4'
+      ReprintOnOverFlow = True
+      DataField = 'VW_Calculo_Comision_Manu'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ReprintOnSubsequent = True
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 3703
+      mmLeft = 232297
+      mmTop = 794
+      mmWidth = 31490
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppMemo1: TppMemo
+      DesignLayer = ppDesignLayer1
+      UserName = 'Memo1'
+      Caption = 'Memo1'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Lines.Strings = (
+        
+          'El siguiente reporte esta dise'#241'ado extrallendo la informacion co' +
+          'rrespondiente a la tabla de pagos y descontando la parte almacen' +
+          'ada del iva del calculo final del pago recibido por '
+        
+          'parte del cliente por lo que el monto de comision a pagar corres' +
+          'ponde al monto del pago menos el iva de la fraccion correspondie' +
+          'nte.')
+      RemoveEmptyLines = False
+      Transparent = True
+      mmHeight = 14817
+      mmLeft = 1588
+      mmTop = 5291
+      mmWidth = 264055
+      BandType = 8
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      mmLeading = 0
+    end
+    object ppLabel15: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label15'
+      Caption = 'Total Cobrado Por el Vendedor '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 54240
+      mmTop = 529
+      mmWidth = 45773
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppLabel16: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label16'
+      Caption = 'Total a Pagar al Vendedor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 191823
+      mmTop = 794
+      mmWidth = 37042
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 10054
+    mmPrintPosition = 0
+    object ppShape2: TppShape
+      DesignLayer = ppDesignLayer1
+      UserName = 'Shape2'
+      mmHeight = 5027
+      mmLeft = 795
+      mmTop = 0
+      mmWidth = 264584
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc2: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc2'
+      ReprintOnOverFlow = True
+      DataField = 'MONTO_PAGADO'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ReprintOnSubsequent = True
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 4498
+      mmLeft = 101584
+      mmTop = 0
+      mmWidth = 38380
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppDBCalc3: TppDBCalc
+      DesignLayer = ppDesignLayer1
+      UserName = 'DBCalc3'
+      ReprintOnOverFlow = True
+      DataField = 'VW_Calculo_Comision_Manu'
+      DataPipeline = daADOQueryDataView1.VW_Calculo_Comision_Manual
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      ReprintOnSubsequent = True
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_Calculo_Comision_Manual'
+      mmHeight = 4498
+      mmLeft = 232290
+      mmTop = 0
+      mmWidth = 31498
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppLabel13: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label12'
+      Caption = 'Total Cobrado Por el Vendedor en Pagina'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 40217
+      mmTop = 529
+      mmWidth = 59796
+      BandType = 7
+      LayerName = Foreground
+    end
+    object ppLabel14: TppLabel
+      DesignLayer = ppDesignLayer1
+      UserName = 'Label14'
+      Caption = 'Total a Pagar al Vendedor en Pagina'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      FormField = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 177007
+      mmTop = 529
+      mmWidth = 51858
+      BandType = 7
+      LayerName = Foreground
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060F
+      5661726961626C65324F6E43616C630B50726F6772616D54797065070B747450
+      726F63656475726506536F7572636506A070726F636564757265205661726961
+      626C65324F6E43616C63287661722056616C75653A2056617269616E74293B0D
+      0A626567696E0D0A0D0A202056616C7565203A3D2056575F43616C63756C6F5F
+      436F6D6973696F6E5F4D616E75616C5B27436F64436C6965275D2B2720272B20
+      202056575F43616C63756C6F5F436F6D6973696F6E5F4D616E75616C5B274465
+      7363726970275D0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+      095661726961626C6532094576656E744E616D6506064F6E43616C6307457665
+      6E7449440221084361726574506F7301025E0202000001060F5472614576656E
+      7448616E646C65720B50726F6772616D4E616D65060F5661726961626C65314F
+      6E43616C630B50726F6772616D54797065070B747450726F6365647572650653
+      6F7572636514F400000070726F636564757265205661726961626C65314F6E43
+      616C63287661722056616C75653A2056617269616E74293B0D0A626567696E0D
+      0A0D0A76616C7565203A3D20202027522E492E463A2027202B2020204461746F
+      735F456D70726573615B2749445F46697363616C275D202B20272D2020446972
+      65636369C3B36E3A2027202B2020204461746F735F456D70726573615B274469
+      72656363696F6E31275D202B20272027202B202020204461746F735F456D7072
+      6573615B27446972656363696F6E32275D202B20272027202B204461746F735F
+      456D70726573615B2754656C65666F6E6F73275D0D0A0D0A656E643B0D0A0D43
+      6F6D706F6E656E744E616D6506095661726961626C6531094576656E744E616D
+      6506064F6E43616C63074576656E7449440221084361726574506F7301020302
+      02000000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_VW_Calculo_Comision_Manual'
+      Height = 384
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object VW_Calculo_Comision_Manual: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'VW_Calculo_Comision_Manual'
+        object ppField1: TppField
+          FieldAlias = 'BASE IMP PAG'
+          FieldName = 'BASE_IMP_PAG'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField2: TppField
+          FieldAlias = 'BASE RET PAG'
+          FieldName = 'BASE_RET_PAG'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField3: TppField
+          FieldAlias = 'CODIG VEND'
+          FieldName = 'CODIG_VEND'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField4: TppField
+          FieldAlias = 'DETALLE DEL PAGO'
+          FieldName = 'DETALLE_DEL_PAGO'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField5: TppField
+          FieldAlias = 'FECHA DEL PAGO'
+          FieldName = 'FECHA_DEL_PAGO'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField6: TppField
+          FieldAlias = 'FECHA FACT'
+          FieldName = 'FECHA_FACT'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField7: TppField
+          FieldAlias = 'MONTO IVA PAGO'
+          FieldName = 'MONTO_IVA_PAGO'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField8: TppField
+          FieldAlias = 'MONTO ORIGINAL'
+          FieldName = 'MONTO_ORIGINAL'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField9: TppField
+          FieldAlias = 'MONTO PAGADO'
+          FieldName = 'MONTO_PAGADO'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField10: TppField
+          FieldAlias = 'MtoTax'
+          FieldName = 'MtoTax'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField11: TppField
+          FieldAlias = 'MtoTotal'
+          FieldName = 'MtoTotal'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField12: TppField
+          FieldAlias = 'NUMERO F'
+          FieldName = 'NUMERO_F'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField13: TppField
+          FieldAlias = 'NUMERO FACT'
+          FieldName = 'NUMERO_FACT'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField14: TppField
+          FieldAlias = 'P EXENTO PAGO'
+          FieldName = 'P_EXENTO_PAGO'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField15: TppField
+          FieldAlias = 'TIENE RET'
+          FieldName = 'TIENE_RET'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField16: TppField
+          FieldAlias = 'TIPO CXC'
+          FieldName = 'TIPO_CXC'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField17: TppField
+          FieldAlias = 'TIPO DE DOC'
+          FieldName = 'TIPO_DE_DOC'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField18: TppField
+          FieldAlias = 'TipoCxc'
+          FieldName = 'TipoCxc'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField19: TppField
+          FieldAlias = 'CodClie'
+          FieldName = 'CodClie'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Descrip'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField21: TppField
+          FieldAlias = 'NumeroD'
+          FieldName = 'NumeroD'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField22: TppField
+          FieldAlias = '% DE COMISION'
+          FieldName = 'DE_COMISION'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField23: TppField
+          FieldAlias = 'DIASCREDITO'
+          FieldName = 'DIASCREDITO'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField24: TppField
+          FieldAlias = 'IVA SOBRE PAGO'
+          FieldName = 'IVA_SOBRE_PAGO'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+        object ppField25: TppField
+          FieldAlias = 'TotalComisionPago'
+          FieldName = 'VW_Calculo_Comision_Manu'
+          FieldLength = 10
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'VW_Calculo_Comision_Manual'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT '
+          '       VW_Calculo_Comision_Manual."BASE IMP PAG" BASE_IMP_PAG, '
+          '       VW_Calculo_Comision_Manual."BASE RET PAG" BASE_RET_PAG, '
+          '       VW_Calculo_Comision_Manual."CODIG VEND" CODIG_VEND, '
+          
+            '       VW_Calculo_Comision_Manual."DETALLE DEL PAGO" DETALLE_DEL' +
+            '_PAGO, '
+          
+            '       VW_Calculo_Comision_Manual."FECHA DEL PAGO" FECHA_DEL_PAG' +
+            'O, '
+          '       VW_Calculo_Comision_Manual."FECHA FACT" FECHA_FACT, '
+          
+            '       VW_Calculo_Comision_Manual."MONTO IVA PAGO" MONTO_IVA_PAG' +
+            'O, '
+          
+            '       VW_Calculo_Comision_Manual."MONTO ORIGINAL" MONTO_ORIGINA' +
+            'L, '
+          '       VW_Calculo_Comision_Manual."MONTO PAGADO" MONTO_PAGADO, '
+          '       VW_Calculo_Comision_Manual.MtoTax, '
+          '       VW_Calculo_Comision_Manual.MtoTotal, '
+          '       VW_Calculo_Comision_Manual."NUMERO F" NUMERO_F, '
+          '       VW_Calculo_Comision_Manual."NUMERO FACT" NUMERO_FACT, '
+          
+            '       VW_Calculo_Comision_Manual."P EXENTO PAGO" P_EXENTO_PAGO,' +
+            ' '
+          '       VW_Calculo_Comision_Manual."TIENE RET" TIENE_RET, '
+          '       VW_Calculo_Comision_Manual."TIPO CXC" TIPO_CXC, '
+          '       VW_Calculo_Comision_Manual."TIPO DE DOC" TIPO_DE_DOC, '
+          '       VW_Calculo_Comision_Manual.TipoCxc, '
+          '       VW_Calculo_Comision_Manual.CodClie, '
+          '       VW_Calculo_Comision_Manual.Descrip, '
+          '       VW_Calculo_Comision_Manual.NumeroD, '
+          '       VW_Calculo_Comision_Manual."% DE COMISION" DE_COMISION, '
+          '       VW_Calculo_Comision_Manual.DIASCREDITO, '
+          
+            '       VW_Calculo_Comision_Manual."IVA SOBRE PAGO" IVA_SOBRE_PAG' +
+            'O, '
+          
+            '       ((VW_Calculo_Comision_Manual."MONTO PAGADO" - VW_Calculo_' +
+            'Comision_Manual.MtoTax) * ((VW_Calculo_Comision_Manual."% DE COM' +
+            'ISION" / 100)+1)) - (VW_Calculo_Comision_Manual."MONTO PAGADO" -' +
+            ' VW_Calculo_Comision_Manual.MtoTax) VW_Calculo_Comision_Manu'
+          'FROM '
+          '     VW_Calculo_Comision_Manual VW_Calculo_Comision_Manual'
+          'WHERE '
+          
+            '      ( VW_Calculo_Comision_Manual."FECHA DEL PAGO" >= CONVERT(D' +
+            'ATETIME,'#39'1999-12-01'#39',120) )'
+          
+            '       AND ( VW_Calculo_Comision_Manual."FECHA DEL PAGO" <= CONV' +
+            'ERT(DATETIME,'#39'2999-12-01'#39',120) )'
+          '       AND ( VW_Calculo_Comision_Manual."CODIG VEND" = '#39'VDM04'#39' )'
+          'ORDER BY '
+          '         VW_Calculo_Comision_Manual."FECHA DEL PAGO", '
+          '         VW_Calculo_Comision_Manual.NumeroD')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'TotalComisionPago'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoTax'
+          FieldLength = 10
+          FieldName = 'MtoTax'
+          SQLFieldName = 'VW_Calculo_Comision_Manu'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+          CalcType = dacaExpression
+          Expression = 
+            '((VW_Calculo_Comision_Manual."MONTO PAGADO" - VW_Calculo_Comisio' +
+            'n_Manual.MtoTax) * ((VW_Calculo_Comision_Manual."% DE COMISION" ' +
+            '/ 100)+1)) - (VW_Calculo_Comision_Manual."MONTO PAGADO" - VW_Cal' +
+            'culo_Comision_Manual.MtoTax)'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoGreaterThanOrEqualTo
+          Value = '01/12/1999'
+          object TdaField
+            Alias = 'FECHA DEL PAGO'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'FECHA DEL PAGO'
+            FieldLength = 10
+            FieldName = 'FECHA DEL PAGO'
+            Mandatory = True
+            SQLFieldName = 'FECHA DEL PAGO'
+            TableAlias = 'VW_Calculo_Comision_Manual'
+            TableName = 'VW_Calculo_Comision_Manual'
+            TableSQLAlias = 'VW_Calculo_Comision_Manual'
+          end
+          object TdaNumericValue
+            Value = 36495.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoLessThanOrEqualTo
+          Value = '01/12/2999'
+          object TdaField
+            Alias = 'FECHA DEL PAGO'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'FECHA DEL PAGO'
+            FieldLength = 10
+            FieldName = 'FECHA DEL PAGO'
+            Mandatory = True
+            SQLFieldName = 'FECHA DEL PAGO'
+            TableAlias = 'VW_Calculo_Comision_Manual'
+            TableName = 'VW_Calculo_Comision_Manual'
+            TableSQLAlias = 'VW_Calculo_Comision_Manual'
+          end
+          object TdaNumericValue
+            Value = 401738.000000000000000000
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = 'VDM04'
+          object TdaField
+            Alias = 'CODIG VEND'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'CODIG VEND'
+            FieldLength = 10
+            FieldName = 'CODIG VEND'
+            Mandatory = True
+            SQLFieldName = 'CODIG VEND'
+            TableAlias = 'VW_Calculo_Comision_Manual'
+            TableName = 'VW_Calculo_Comision_Manual'
+            TableSQLAlias = 'VW_Calculo_Comision_Manual'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'BASE IMP PAG'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'BASE IMP PAG'
+          FieldLength = 4
+          FieldName = 'BASE IMP PAG'
+          SQLFieldName = 'BASE_IMP_PAG'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField2: TdaField
+          Alias = 'BASE RET PAG'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'BASE RET PAG'
+          FieldLength = 4
+          FieldName = 'BASE RET PAG'
+          SQLFieldName = 'BASE_RET_PAG'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField3: TdaField
+          Alias = 'CODIG VEND'
+          DisplayWidth = 10
+          FieldAlias = 'CODIG VEND'
+          FieldLength = 10
+          FieldName = 'CODIG VEND'
+          SQLFieldName = 'CODIG_VEND'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField4: TdaField
+          Alias = 'DETALLE DEL PAGO'
+          DisplayWidth = 10
+          FieldAlias = 'DETALLE DEL PAGO'
+          FieldLength = 40
+          FieldName = 'DETALLE DEL PAGO'
+          SQLFieldName = 'DETALLE_DEL_PAGO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField5: TdaField
+          Alias = 'FECHA DEL PAGO'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FECHA DEL PAGO'
+          FieldLength = 0
+          FieldName = 'FECHA DEL PAGO'
+          SQLFieldName = 'FECHA_DEL_PAGO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField6: TdaField
+          Alias = 'FECHA FACT'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FECHA FACT'
+          FieldLength = 0
+          FieldName = 'FECHA FACT'
+          SQLFieldName = 'FECHA_FACT'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField7: TdaField
+          Alias = 'MONTO IVA PAGO'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MONTO IVA PAGO'
+          FieldLength = 4
+          FieldName = 'MONTO IVA PAGO'
+          SQLFieldName = 'MONTO_IVA_PAGO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField8: TdaField
+          Alias = 'MONTO ORIGINAL'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MONTO ORIGINAL'
+          FieldLength = 4
+          FieldName = 'MONTO ORIGINAL'
+          SQLFieldName = 'MONTO_ORIGINAL'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField9: TdaField
+          Alias = 'MONTO PAGADO'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MONTO PAGADO'
+          FieldLength = 4
+          FieldName = 'MONTO PAGADO'
+          SQLFieldName = 'MONTO_PAGADO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField10: TdaField
+          Alias = 'MtoTax'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoTax'
+          FieldLength = 4
+          FieldName = 'MtoTax'
+          SQLFieldName = 'MtoTax'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField11: TdaField
+          Alias = 'MtoTotal'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'MtoTotal'
+          FieldLength = 4
+          FieldName = 'MtoTotal'
+          SQLFieldName = 'MtoTotal'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField12: TdaField
+          Alias = 'NUMERO F'
+          DisplayWidth = 10
+          FieldAlias = 'NUMERO F'
+          FieldLength = 20
+          FieldName = 'NUMERO F'
+          SQLFieldName = 'NUMERO_F'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField13: TdaField
+          Alias = 'NUMERO FACT'
+          DisplayWidth = 10
+          FieldAlias = 'NUMERO FACT'
+          FieldLength = 20
+          FieldName = 'NUMERO FACT'
+          SQLFieldName = 'NUMERO_FACT'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField14: TdaField
+          Alias = 'P EXENTO PAGO'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'P EXENTO PAGO'
+          FieldLength = 4
+          FieldName = 'P EXENTO PAGO'
+          SQLFieldName = 'P_EXENTO_PAGO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField15: TdaField
+          Alias = 'TIENE RET'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'TIENE RET'
+          FieldLength = 0
+          FieldName = 'TIENE RET'
+          SQLFieldName = 'TIENE_RET'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField16: TdaField
+          Alias = 'TIPO CXC'
+          DisplayWidth = 10
+          FieldAlias = 'TIPO CXC'
+          FieldLength = 2
+          FieldName = 'TIPO CXC'
+          SQLFieldName = 'TIPO_CXC'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField17: TdaField
+          Alias = 'TIPO DE DOC'
+          DisplayWidth = 10
+          FieldAlias = 'TIPO DE DOC'
+          FieldLength = 1
+          FieldName = 'TIPO DE DOC'
+          SQLFieldName = 'TIPO_DE_DOC'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField18: TdaField
+          Alias = 'TipoCxc'
+          DisplayWidth = 10
+          FieldAlias = 'TipoCxc'
+          FieldLength = 2
+          FieldName = 'TipoCxc'
+          SQLFieldName = 'TipoCxc'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField19: TdaField
+          Alias = 'CodClie'
+          DisplayWidth = 10
+          FieldAlias = 'CodClie'
+          FieldLength = 15
+          FieldName = 'CodClie'
+          SQLFieldName = 'CodClie'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField20: TdaField
+          Alias = 'Descrip'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField21: TdaField
+          Alias = 'NumeroD'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroD'
+          FieldLength = 20
+          FieldName = 'NumeroD'
+          SQLFieldName = 'NumeroD'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField22: TdaField
+          Alias = '% DE COMISION'
+          DisplayWidth = 10
+          FieldAlias = '% DE COMISION'
+          FieldLength = 2
+          FieldName = '% DE COMISION'
+          SQLFieldName = 'DE_COMISION'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField23: TdaField
+          Alias = 'DIASCREDITO'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'DIASCREDITO'
+          FieldLength = 0
+          FieldName = 'DIASCREDITO'
+          SQLFieldName = 'DIASCREDITO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField24: TdaField
+          Alias = 'IVA SOBRE PAGO'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'IVA SOBRE PAGO'
+          FieldLength = 4
+          FieldName = 'IVA SOBRE PAGO'
+          SQLFieldName = 'IVA_SOBRE_PAGO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField25: TdaField
+          ChildType = 2
+          Alias = 'FECHA DEL PAGO'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FECHA DEL PAGO'
+          FieldLength = 10
+          FieldName = 'FECHA DEL PAGO'
+          SQLFieldName = 'FECHA DEL PAGO'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daField26: TdaField
+          ChildType = 2
+          Alias = 'NumeroD'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroD'
+          FieldLength = 10
+          FieldName = 'NumeroD'
+          SQLFieldName = 'NumeroD'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+          TableSQLAlias = 'VW_Calculo_Comision_Manual'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'VW_Calculo_Comision_Manual'
+          JoinType = dajtNone
+          SQLAlias = 'VW_Calculo_Comision_Manual'
+          TableAlias = 'VW_Calculo_Comision_Manual'
+          TableName = 'VW_Calculo_Comision_Manual'
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Vendedores'
+      Height = 461
+      Left = 305
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 9
+      TypeColumnWidth = 52
+      Width = 477
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_VW_Calculo_Comision_Manual'
+      object Vendedores: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Vendedores'
+        MasterDataPipelineName = 'VW_Calculo_Comision_Manual'
+        object ppField1: TppField
+          FieldAlias = 'Activo'
+          FieldName = 'Activo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAVEND'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Clase'
+          FieldName = 'Clase'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAVEND'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cod_Ciudad'
+          FieldName = 'Ciudad'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAVEND'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Cod_Estado'
+          FieldName = 'Estado'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAVEND'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Cod_Municipio'
+          FieldName = 'Municipio'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SAVEND'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Cod_Pais'
+          FieldName = 'Pais'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SAVEND'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cod_Vendedor'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SAVEND'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Codigo_Postal'
+          FieldName = 'ZipCode'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SAVEND'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SAVEND'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SAVEND'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SAVEND'
+        end
+        object ppField12: TppField
+          FieldAlias = 'email'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SAVEND'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Identificador'
+          FieldName = 'ID3'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SAVEND'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Movil'
+          FieldName = 'Movil'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SAVEND'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SAVEND'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Tipo_ID'
+          FieldName = 'TipoID'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SAVEND'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Tipo_Persona'
+          FieldName = 'TipoID3'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SAVEND'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Ult_cobro'
+          FieldName = 'FechaUC'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SAVEND'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Ult_venta'
+          FieldName = 'FechaUV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SAVEND'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'FECHA_DEL_PAGO'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'FECHA_DEL_PAGO'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'NumeroD'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'NumeroD'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'CODIG_VEND'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'CodVend'
+          DetailSortOrder = soAscending
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Vendedores'
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SAVEND.Activo, SAVEND.Clase, '
+          '       SAVEND.Ciudad, SAVEND.Estado, '
+          '       SAVEND.Municipio, SAVEND.Pais, '
+          '       SAVEND.CodVend, SAVEND.ZipCode, '
+          '       SAVEND.Descrip, SAVEND.Direc1, '
+          '       SAVEND.Direc2, SAVEND.Email, SAVEND.ID3, '
+          '       SAVEND.Movil, SAVEND.Telef, SAVEND.TipoID, '
+          '       SAVEND.TipoID3, SAVEND.FechaUC, '
+          '       SAVEND.FechaUV'
+          'FROM SAVEND SAVEND')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Activo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Activo'
+          FieldLength = 0
+          FieldName = 'Activo'
+          SQLFieldName = 'Activo'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField2: TdaField
+          Alias = 'Clase'
+          DisplayWidth = 10
+          FieldAlias = 'Clase'
+          FieldLength = 10
+          FieldName = 'Clase'
+          SQLFieldName = 'Clase'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField3: TdaField
+          Alias = 'Cod_Ciudad'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Ciudad'
+          FieldLength = 0
+          FieldName = 'Ciudad'
+          SQLFieldName = 'Ciudad'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField4: TdaField
+          Alias = 'Cod_Estado'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Estado'
+          FieldLength = 0
+          FieldName = 'Estado'
+          SQLFieldName = 'Estado'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField5: TdaField
+          Alias = 'Cod_Municipio'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Municipio'
+          FieldLength = 0
+          FieldName = 'Municipio'
+          SQLFieldName = 'Municipio'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField6: TdaField
+          Alias = 'Cod_Pais'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Pais'
+          FieldLength = 0
+          FieldName = 'Pais'
+          SQLFieldName = 'Pais'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField7: TdaField
+          Alias = 'Cod_Vendedor'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Vendedor'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField8: TdaField
+          Alias = 'Codigo_Postal'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Postal'
+          FieldLength = 20
+          FieldName = 'ZipCode'
+          SQLFieldName = 'ZipCode'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField9: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField10: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 60
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField11: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 60
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField12: TdaField
+          Alias = 'email'
+          DisplayWidth = 10
+          FieldAlias = 'email'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField13: TdaField
+          Alias = 'Identificador'
+          DisplayWidth = 10
+          FieldAlias = 'Identificador'
+          FieldLength = 25
+          FieldName = 'ID3'
+          SQLFieldName = 'ID3'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField14: TdaField
+          Alias = 'Movil'
+          DisplayWidth = 10
+          FieldAlias = 'Movil'
+          FieldLength = 15
+          FieldName = 'Movil'
+          SQLFieldName = 'Movil'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField15: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 30
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField16: TdaField
+          Alias = 'Tipo_ID'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_ID'
+          FieldLength = 0
+          FieldName = 'TipoID'
+          SQLFieldName = 'TipoID'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField17: TdaField
+          Alias = 'Tipo_Persona'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tipo_Persona'
+          FieldLength = 0
+          FieldName = 'TipoID3'
+          SQLFieldName = 'TipoID3'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField18: TdaField
+          Alias = 'Ult_cobro'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Ult_cobro'
+          FieldLength = 0
+          FieldName = 'FechaUC'
+          SQLFieldName = 'FechaUC'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField19: TdaField
+          Alias = 'Ult_venta'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Ult_venta'
+          FieldLength = 0
+          FieldName = 'FechaUV'
+          SQLFieldName = 'FechaUV'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Vendedores'
+          JoinType = dajtNone
+          SQLAlias = 'SAVEND'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+        end
+        object daSQLLink1: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'CODIG VEND'
+            DisplayWidth = 10
+            FieldAlias = 'CODIG VEND'
+            FieldLength = 10
+            FieldName = 'CODIG VEND'
+            SQLFieldName = 'CODIG_VEND'
+            TableAlias = 'VW_Calculo_Comision_Manual'
+            TableName = 'VW_Calculo_Comision_Manual'
+            TableSQLAlias = 'VW_Calculo_Comision_Manual'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'Cod_Vendedor'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Vendedor'
+            FieldLength = 10
+            FieldName = 'CodVend'
+            SQLFieldName = 'CodVend'
+            TableAlias = 'Vendedores'
+            TableName = 'SAVEND'
+            TableSQLAlias = 'SAVEND'
+          end
+        end
+      end
+    end
+    object daADOQueryDataView3: TdaADOQueryDataView
+      UserName = 'Query_Datos_Empresa'
+      Height = 267
+      Left = 822
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 8
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Datos_Empresa: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Datos_Empresa'
+        object ppField1: TppField
+          FieldAlias = 'Codigo_Postal'
+          FieldName = 'ZipCode'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SACONF'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SACONF'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SACONF'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SACONF'
+        end
+        object ppField5: TppField
+          FieldAlias = 'EMail'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SACONF'
+        end
+        object ppField6: TppField
+          FieldAlias = 'ID_Fiscal'
+          FieldName = 'RIF'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SACONF'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Logo'
+          FieldName = 'Imagen'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 6
+          Searchable = False
+          Sortable = False
+          TableName = 'SACONF'
+        end
+        object ppField8: TppField
+          FieldAlias = 'NroEstable'
+          FieldName = 'NroEstable'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SACONF'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SACONF'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SACONF'
+        end
+      end
+      object daSQL3: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Datos_Empresa'
+        LinkColor = clGreen
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SACONF.ZipCode, SACONF.Descrip, '
+          '       SACONF.Direc1, SACONF.Direc2, '
+          '       SACONF.Email, SACONF.RIF, SACONF.Imagen, '
+          '       SACONF.NroEstable, SACONF.CodSucu, '
+          '       SACONF.Telef'
+          'FROM SACONF SACONF')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Codigo_Postal'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Postal'
+          FieldLength = 20
+          FieldName = 'ZipCode'
+          SQLFieldName = 'ZipCode'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField2: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 80
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField3: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 80
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField4: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 80
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField5: TdaField
+          Alias = 'EMail'
+          DisplayWidth = 10
+          FieldAlias = 'EMail'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField6: TdaField
+          Alias = 'ID_Fiscal'
+          DisplayWidth = 10
+          FieldAlias = 'ID_Fiscal'
+          FieldLength = 30
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField7: TdaField
+          Alias = 'Logo'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'Logo'
+          FieldLength = 0
+          FieldName = 'Imagen'
+          Linkable = False
+          Searchable = False
+          Sortable = False
+          SQLFieldName = 'Imagen'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField8: TdaField
+          Alias = 'NroEstable'
+          DisplayWidth = 10
+          FieldAlias = 'NroEstable'
+          FieldLength = 10
+          FieldName = 'NroEstable'
+          SQLFieldName = 'NroEstable'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField9: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField10: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 40
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Datos_Empresa'
+          JoinType = dajtNone
+          SQLAlias = 'SACONF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+        end
+      end
+    end
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

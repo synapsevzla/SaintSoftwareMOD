@@ -1,0 +1,36 @@
+SELECT     SAPROV.CodProv, SAACXP.AfectaCom, SAACXP.AfectaCom AS AfectaCom_2, SAPROV.Descrip, SAPROV.ID3, SAACXP.BaseImpo, SAACXP.BaseImpo AS BaseImpo_2, 
+                      SAACXP.CancelA, SAACXP.CancelA AS CancelA_2, SAACXP.CancelC, SAACXP.CancelC AS CancelC_2, SAACXP.NumeroD, SAACXP.NumeroD AS NumeroD_2, 
+                      SAACXP.CancelD, SAACXP.CancelD AS CancelD_2, SAACXP.CancelE, SAACXP.CancelE AS CancelE_2, SAACXP.CancelG, SAACXP.CancelG AS CancelG_2, 
+                      SAACXP.CancelI, SAACXP.CancelI AS CancelI_2, SAACXP.CancelT, SAACXP.CancelT AS CancelT_2, SAACXP.CodEsta, SAACXP.CodEsta AS CodEsta_2, 
+                      SAACXP.CodOper, SAACXP.CodOper AS CodOper_2, SAACXP.CodProv AS CodProv_2, SAACXP.CodProv AS CodProv_3, SAACXP.CodSucu, 
+                      SAACXP.CodSucu AS CodSucu_2, SAACXP.CodUsua, SAACXP.CodUsua AS CodUsua_2, SAACXP.Descrip AS Descrip_2, SAACXP.Descrip AS Descrip_3, 
+                      SAACXP.DetalChq, SAACXP.DetalChq AS DetalChq_2, SAACXP.[Document], SAACXP.[Document] AS Document_2, SAACXP.EsLibroI, SAACXP.EsLibroI AS EsLibroI_2, 
+                      SAACXP.EsReten, SAACXP.EsReten AS EsReten_2, SAACXP.EsUnPago, SAACXP.EsUnPago AS EsUnPago_2, SAACXP.Factor, SAACXP.Factor AS Factor_2, 
+                      SAACXP.FechaE, SAACXP.FechaE AS FechaE_2, SAACXP.FechaI, SAACXP.FechaI AS FechaI_2, SAACXP.FechaR, SAACXP.FechaR AS FechaR_2, SAACXP.FechaT, 
+                      SAACXP.FechaT AS FechaT_2, SAACXP.FechaV, SAACXP.FechaV AS FechaV_2, SAACXP.ID3 AS ID3_2, SAACXP.ID3 AS ID3_3, SAACXP.Monto, 
+                      SAACXP.Monto AS Monto_2, SAPAGCXP.BaseImpo AS BaseImpo_3, SAACXP.MontoMEx, SAACXP.MontoMEx AS MontoMEx_2, SAPAGCXP.BaseReten, 
+                      SAPAGCXP.CodOper AS CodOper_3, SAACXP.MontoNeto, SAACXP.MontoNeto AS MontoNeto_2, SAPAGCXP.CodRete, SAPAGCXP.Descrip AS Descrip_4, 
+                      SAACXP.MtoTax, SAACXP.MtoTax AS MtoTax_2, SAPAGCXP.EsReten AS EsReten_3, SAPAGCXP.FechaE AS FechaE_3, SAACXP.Notas1, SAACXP.Notas1 AS Notas1_2, 
+                      SAPAGCXP.FechaO, SAPAGCXP.Monto AS Monto_3, SAACXP.Notas10, SAACXP.Notas10 AS Notas10_2, SAPAGCXP.MontoDocA, SAPAGCXP.MtoTax AS MtoTax_3, 
+                      SAACXP.Notas2, SAACXP.Notas2 AS Notas2_2, SAPAGCXP.NroPpal, SAPAGCXP.NroRegi, SAACXP.Notas3, SAACXP.Notas3 AS Notas3_2, SAPAGCXP.NroUnico, 
+                      SAPAGCXP.NumeroD AS NumeroD_3, SAACXP.Notas4, SAACXP.Notas4 AS Notas4_2, SAPAGCXP.RetenIVA, SAPAGCXP.TExento, SAACXP.Notas5, 
+                      SAACXP.Notas5 AS Notas5_2, SAPAGCXP.TipoCxP, SAACXP.Notas6, SAACXP.Notas6 AS Notas6_2, SAACXP.Notas7, SAACXP.Notas7 AS Notas7_2, SAACXP.Notas8, 
+                      SAACXP.Notas8 AS Notas8_2, SAACXP.Notas9, SAACXP.Notas9 AS Notas9_2, SAACXP.NroCtrol, SAACXP.NroCtrol AS NroCtrol_2, SAACXP.NroOPago, 
+                      SAACXP.NroOPago AS NroOPago_2, SAACXP.NroRegi AS NroRegi_2, SAACXP.NroRegi AS NroRegi_3, SAACXP.NroUnico AS NroUnico_2, 
+                      SAACXP.NroUnico AS NroUnico_3, SAACXP.NumeroN, SAACXP.NumeroN AS NumeroN_2, SAACXP.OrgTax, SAACXP.OrgTax AS OrgTax_2, 
+                      SAACXP.RetenIVA AS RetenIVA_2, SAACXP.RetenIVA AS RetenIVA_3, SAACXP.Saldo, SAACXP.Saldo AS Saldo_2, SAACXP.SaldoAct, SAACXP.SaldoAct AS SaldoAct_2, 
+                      SAACXP.SaldoMEx, SAACXP.SaldoMEx AS SaldoMEx_2, SAACXP.SaldoOrg, SAACXP.SaldoOrg AS SaldoOrg_2, SAACXP.TExento AS TExento_2, 
+                      SAACXP.TExento AS TExento_3, SAACXP.TipoCxP AS TipoCxP_2, SAACXP.TipoCxP AS TipoCxP_3, SAPAGCXP.Sustraendo, SAPROV.Activo, SAPROV.Ciudad, 
+                      SAPROV.Clase, SAPROV.DiasCred, SAPROV.Direc1, SAPROV.Direc2, SAPROV.Email, SAPROV.EsMoneda, SAPROV.EsReten AS EsReten_4, SAPROV.Estado, 
+                      SAPROV.Fax, SAPROV.FechaE AS FechaE_4, SAPROV.FechaUC, SAPROV.FechaUP, SAPROV.MontoMax, SAPROV.MontoUC, SAPROV.MontoUP, SAPROV.Movil, 
+                      SAPROV.Municipio, SAPROV.NumeroUC, SAPROV.NumeroUP, SAPROV.Observa, SAPROV.PagosA, SAPROV.Pais, SAPROV.PromPago, SAPROV.Represent, 
+                      SAPROV.RetenISLR, SAPROV.RetenIVA AS RetenIVA_4, SAPROV.Saldo AS Saldo_3, SAPROV.Telef, SAPROV.TipoID3, SAPROV.TipoPrv, SAPROV.ZipCode, 
+                      SAACXP_3.Monto AS Monto_4, SAACXP_3.MontoNeto AS MontoNeto_3, SAACXP_3.MtoTax AS MtoTax_4, SAACXP_3.RetenIVA AS RetenIVA_5, 
+                      SAACXP_3.TExento AS TExento_4, SAACXP_3.BaseImpo AS BaseImpo_4, SAACXP_2.MontoNeto - SAACXP_2.BaseImpo AS saacxp_2_montoneto_saacxp, 
+                      CASE WHEN SAACXP.BaseImpo > 0 THEN SAACXP.BaseImpo WHEN SAACXP.BaseImpo = 0 THEN SAACXP_3.BaseImpo END AS BASEIMPO2017
+FROM         dbo.SAACXP AS SAACXP INNER JOIN
+                      dbo.SAPAGCXP AS SAPAGCXP ON SAPAGCXP.NroPpal = SAACXP.NroUnico INNER JOIN
+                      dbo.SAACXP AS SAACXP_2 ON SAACXP_2.NroUnico = SAPAGCXP.NroRegi INNER JOIN
+                      dbo.SAPROV AS SAPROV ON SAPROV.CodProv = SAACXP_2.CodProv INNER JOIN
+                      dbo.SAACXP AS SAACXP_3 ON SAACXP_3.NroUnico = SAACXP.NroRegi
+WHERE     (SAACXP.TipoCxP = '81')

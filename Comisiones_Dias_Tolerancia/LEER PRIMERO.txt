@@ -1,0 +1,77 @@
+﻿Notas del reporte:
+
+el reporte depende de una serie de condiciones para su correcto funcionamiento
+
+1. Copie el codigo de la vista y guardelo con el nombre VW_Calculo_Comision_Manual.
+2. Ejecute el procedimiento para agregar la vista al generador de reporte.
+3. Agrege el reporte al generador de reportes.
+4. Guardelo con el nombre de su preferencia.
+
+Nota: la vista esta diceñada con valores especificos dentro de la sentencia case que establecen los dias de tolerancia de forma fija para todos los vendedores asi como el respectivo % de comision, si estos valores son diferente para usted entonces ajuste los valores de la vista antes de almacenarla y ejecute el paso 2.
+
+Si agrego la vista por defecto y luego usted necesita cambiar los valores solo vuelva a ejecutar el paso 2.
+
+------------------------------------------------------------------------------------------------------------------
+		CODIGO DE LA VISTA ACTUALIZADO QUE EXTRAE SOLO EL TIPO CXC 10 REFERENTE A LOS PAGOS EN CXC
+------------------------------------------------------------------------------------------------------------------
+
+SELECT     dbo.SAPAGCXC.TipoCxc, dbo.SAPAGCXC.Monto AS [MONTO PAGADO], dbo.SAPAGCXC.Descrip AS [DETALLE DEL PAGO], dbo.SAPAGCXC.EsReten AS [TIENE RET], 
+                      dbo.SAPAGCXC.BaseReten AS [BASE RET PAG], dbo.SAPAGCXC.BaseImpo AS [BASE IMP PAG], dbo.SAPAGCXC.TExento AS [P EXENTO PAGO], 
+                      dbo.SAPAGCXC.MtoTax AS [MONTO IVA PAGO], dbo.SAACXC.NumeroN AS [NUMERO FACT], dbo.SAFACT.TipoFac AS [TIPO DE DOC], 
+                      dbo.SAFACT.NumeroD AS [NUMERO F], dbo.SAFACT.Monto AS [MONTO ORIGINAL], dbo.SAFACT.FechaE AS [FECHA FACT], 
+                      dbo.SAPAGCXC.FechaE AS [FECHA DEL PAGO], dbo.SAACXC.CodVend AS [CODIG VEND], dbo.SAACXC.TipoCxc AS [TIPO CXC], dbo.SAFACT.MtoTax, 
+                      dbo.SAFACT.MtoTotal, dbo.SAACXC.NumeroD, dbo.SAFACT.CodClie, dbo.SAFACT.Descrip, DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) AS DIASCREDITO, 
+                      CASE WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 0 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 3 THEN 3.5 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 4 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 7 THEN 3.25 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 8 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 14 THEN 3 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 15 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 30 THEN 2 WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 31 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 30000000 THEN 0 ELSE NULL END AS [% DE COMISION], dbo.SAACXC.MtoTax AS [IVA SOBRE PAGO]
+FROM         dbo.SAPAGCXC INNER JOIN
+                      dbo.SAACXC ON dbo.SAPAGCXC.NroPpal = dbo.SAACXC.NroUnico INNER JOIN
+                      dbo.SAFACT ON dbo.SAACXC.NumeroN = dbo.SAFACT.NumeroD
+WHERE     (dbo.SAPAGCXC.TipoCxc = '10')
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+lOS VALORES A CAMBIAR SE ENCUENTRA EN ESTAS LINEAS DE CODIGO
+
+ 
+                      CASE 
+					  WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 0 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 3 THEN 3.5 
+					  WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 4 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 7 THEN 3.25 
+					  WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 8 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 14 THEN 3 
+					  WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 15 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 30 THEN 2 
+					  WHEN DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) >= 31 AND DATEDIFF(d, dbo.SAFACT.FechaE, dbo.SAPAGCXC.FechaE) 
+                      <= 30000000 
+					  THEN 0 
+					  ELSE NULL 
+					  END AS [% DE COMISION]
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+					  
+					  
+CAMBIE LOS VALORES UBICADOS DESPUES DEL >=, <= Y DESPUES DEL THEN X RECUERDE SEGUN SU CONFIGURACION REGIONAL USTED DEBERA UTILIZAR UN . O UNA , PARA IDENTIFICAR EL SEPARADOR DE DECIMALES.
+
+Despues de crear la vista ejecuta este query.
+
+Ejecuta este query
+
+
+
+SP_ADDTOGRA.sql
+
+
+Despues de ejecutar es query corre este otro
+
+EXEC  SP_ADDTOGRA 'nombre_de_vista', 'alias_de_vista' remplaza lo que estan entre comillas por el nombre de la vista
+
+Despues de ejecutar el query 
+
+Listo consulta tu generador de reporte y agrega tu vista o tu tabla a saint.
